@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.sidebar {
+    width: 60px; /* Adjusted width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    padding: 10px 0;
+    height: 100vh; /* Fixed height to contain the page height */
+    border-right: 1px solid rgba(94, 93, 93, 0.068); /* Separating line with gray and low opacity */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle depth effect */
+}
+
+.sidebar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px; /* Adjusted width */
+    height: 48px; /* Adjusted height */
+    margin: 15px 0; /* Adjusted margin */
+    cursor: pointer;
+    color: #000000;
+    opacity: 40%;
+    border-radius: 12px;
+}
+
+.sidebar-item.active {
+    border: #5685cb solid 2px;
+    background-color: #F2F7FB;
+    color: #007bff; /* Change color on hover */
+    opacity: 100%;
+}
+
+.sidebar-item:hover {
+    color: #007bff; /* Change color on hover */
+    opacity: 100%;
+}
+
+.sidebar-item .icon {
+    width: 24px; /* Adjusted width */
+    height: 24px; /* Adjusted height */
+}

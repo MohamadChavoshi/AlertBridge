@@ -1,0 +1,234 @@
+.alert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #ccc;
+}
+
+.modal-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-main {
+    flex: 2;
+}
+
+.modal-side {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 15px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid #00000011;
+}
+
+.modal-side h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333; /* Dark color for the title */
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.modal-side p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666; /* Grey color for the description text */
+    font-weight: 600; /* Semi-bold */
+}
+
+.modal-side strong {
+    color: #444; /* Slightly darker color for field names */
+    font-weight: bold;
+}
+
+.modal-side h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.modal-side p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.alert-modal-content h2 {
+    margin-top: 0;
+}
+
+.alert-modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.alert-modal-content input[type="text"]:focus {
+    border-color: #3c68f8; /* Blue color for focus state */
+    box-shadow: 0 0 0 2px rgba(60, 104, 248, 0.2); /* Optional: adds a subtle blue glow */
+}
+
+.contact-points {
+    margin-bottom: 20px;
+}
+
+.contact-points h3 {
+    margin-bottom: 10px;
+}
+
+.contact-points label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-points input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.modal-buttons {
+    border-top: 1px solid #00000011;
+    padding-top: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+    background-color: #3c68f8;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.modal-buttons button:first-child:hover {
+    background-color: #043eff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.modal-buttons button:last-child {
+    background-color: #fa7b72;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #f5190a;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+
+.contact-points-dropdown {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dropdown-toggle {
+    width: 200px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-toggle .icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle .icon.open {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    margin-top: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #00000025;
+    border-top: none;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 10px;
+    cursor: pointer;
+    position: relative; /* Add this */
+}
+
+.dropdown-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 10px; /* Space from left */
+    right: 10px; /* Space from right */
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1); /* Light grey with low opacity */
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.selected-contacts {
+    margin-bottom: 20px;
+}
+
+.contact-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Adjust checkbox spacing */
+.dropdown-item input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.dropdown-item label {
+    display: inline-block;
+    vertical-align: middle;
+}

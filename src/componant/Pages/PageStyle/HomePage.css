@@ -1,0 +1,24 @@
+.header-Home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: none; /* Light grey background */
+}
+
+.workspace-label {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5); /* Grey color with low opacity */
+  margin-right: 20px;
+}
+
+.search-bar-container {
+  flex-grow: 1;
+  max-width: 400px; /* Adjust this value as needed */
+}
+
+/* You might need to adjust the SearchBar component's CSS */
+.search-bar-container .search-bar {
+  width: 100%;
+}

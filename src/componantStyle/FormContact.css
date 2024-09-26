@@ -1,0 +1,100 @@
+.configuration-form {
+  max-width: 500px;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(42, 141, 255, 0.37);
+  text-align: left;
+  direction: ltr;
+}
+
+.configuration-form h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.configuration-form .subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border: 1px solid #719eff;
+  outline: none;
+}
+
+.form-group small {
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.save-button {
+  background-color: #0085ba;
+  width: 130px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.save-button:hover {
+  background-color: #006799;
+}
+
+/* Remove any floating or absolute positioning */
+.configuration-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.outer-container {
+  padding: 40px;
+  min-width: 700px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: solid 1px rgba(0, 0, 0, 0.075);
+  border-radius: 12px;
+}
+
+.contact-form-container {
+  min-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(56, 142, 255, 0.2);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  padding: 20px; /* Add padding for the inner container */
+  background-color: white; /* Optional: background color for better visibility */
+}

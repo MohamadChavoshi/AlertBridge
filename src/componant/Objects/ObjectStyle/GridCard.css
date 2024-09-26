@@ -1,0 +1,73 @@
+.grid-card {
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.09);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 200px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.grid-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.grid-card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.grid-card-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.grid-card-button::after {
+    content: '+';
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.grid-card-number {
+    font-size: 36px;
+    margin-top: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-point-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.contact-point-subtitle {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0B0848;
+    font-weight: bolder;
+    margin-bottom: 32px; /* Increased from 4px to 12px */
+}
+
+.contact-point-title {
+    font-size: 32px; /* Increased from 24px to 32px */
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
