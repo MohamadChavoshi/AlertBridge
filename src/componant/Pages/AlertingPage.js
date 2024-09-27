@@ -8,10 +8,10 @@ const AlertingPage = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedAlert, setSelectedAlert] = useState(null);
     const [alerts, setAlerts] = useState([
-        { message: 'High CPU Usage', id: 'ALR001', selectedContacts: [1, 2] },
-        { message: 'Low Disk Space', id: 'ALR002', selectedContacts: [3] },
-        { message: 'Network Latency', id: 'ALR003', selectedContacts: [2, 4] },
-        { message: 'Database Connection Error', id: 'ALR004', selectedContacts: [1, 3, 4] },
+        { message: 'High CPU Usage', id: 'ALR001', selectedContacts: [1, 2], language: 'en' },
+        { message: 'Low Disk Space', id: 'ALR002', selectedContacts: [3], language: 'en' },
+        { message: 'Network Latency', id: 'ALR003', selectedContacts: [2, 4], language: 'en' },
+        { message: 'Database Connection Error', id: 'ALR004', selectedContacts: [1, 3, 4], language: 'en' },
     ]);
 
     const contactPoints = [
@@ -34,10 +34,19 @@ const AlertingPage = () => {
     const handleSaveAlert = (updatedAlert) => {
         setAlerts(prevAlerts =>
             prevAlerts.map(alert =>
-                alert.id === updatedAlert.id ? updatedAlert : alert
+                alert.id === updatedAlert.id ? { ...updatedAlert, language: updatedAlert.language || 'en' } : alert
             )
         );
         closeModal();
+    };
+
+    // Function to get the full language name
+    const getLanguageName = (code) => {
+        const languages = {
+            'en': 'English',
+            'fa': 'Farsi'
+        };
+        return languages[code] || code;
     };
 
     return (
@@ -57,6 +66,7 @@ const AlertingPage = () => {
                     <tr>
                         <th>Alert Message</th>
                         <th>Alert ID</th>
+                        <th>Alert Language</th>
                         <th>Target Contact Points</th>
                         <th>Edit</th>
                     </tr>
@@ -66,6 +76,11 @@ const AlertingPage = () => {
                         <tr key={index}>
                             <td>{item.message}</td>
                             <td>{item.id}</td>
+                            <td>
+                                <span className="language-tag">
+                                    {getLanguageName(item.language)}
+                                </span>
+                            </td>
                             <td>
                                 {item.selectedContacts.map(contactId => {
                                     const contact = contactPoints.find(c => c.id === contactId);
